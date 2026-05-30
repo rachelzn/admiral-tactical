@@ -34,7 +34,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-syne text-5xl md:text-7xl font-bold text-white max-w-3xl mb-6 leading-tight"
         >
-          Produsen Sepatu Tactical untuk Proyek <span className="text-accent">Pengadaan Skala Besar</span>
+          Produksi Sepatu Tactical dengan <span className="text-accent">Kapasitas Produksi Besar dan Pengiriman Nasional</span>
         </motion.h1>
 
         <motion.p

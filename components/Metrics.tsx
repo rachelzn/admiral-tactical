@@ -6,14 +6,13 @@ import { useRef, useEffect, useState } from 'react';
 export default function Metrics() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.4 });
-  const [counts, setCounts] = useState([0, 0, 0, 100]);
+  const [counts, setCounts] = useState([0, 0, 0, 0]);
 
   useEffect(() => {
     if (!isInView) return;
 
-    const targets = [9, 10000, 500000, 100];
+    const targets = [10, 1000, 5000, 100];
     const intervals: (NodeJS.Timeout | null)[] = targets.map((target, i) => {
-      if (i === 3) return null;
       const duration = 1800;
       const step = target / 60;
       let current = 0;
@@ -39,25 +38,25 @@ export default function Metrics() {
       num: counts[0],
       suffix: '',
       label: 'Tahun Beroperasi',
-      description: 'Beroperasi sejak 2017',
+      description: 'Sejak 2016',
     },
     {
       num: counts[1],
       suffix: '+',
-      label: 'Proyek Diselesaikan',
-      description: 'Klien & institusi terpercaya',
+      label: 'Proyek Selesai',
+      description: 'Skala 500–50.000 pasang',
     },
     {
       num: counts[2],
       suffix: '+',
-      label: 'Pasang Diproduksi',
-      description: 'Produk seragam siap pakai',
+      label: 'Pasang/Bulan',
+      description: 'Kapasitas produksi aktif',
     },
     {
       num: counts[3],
       suffix: '%',
       label: 'Mendukung Custom Design',
-      description: 'Termasuk custom design',
+      description: 'Sesuai Spesifikasi Klien',
     },
   ];
 
@@ -70,8 +69,8 @@ export default function Metrics() {
           transition={{ duration: 0.65 }}
           className="text-center mb-16 reveal"
         >
-          <div className="section-label justify-center">Rekam Jejak</div>
-          <h2 className="text-4xl font-bold mb-0">Angka yang Berbicara</h2>
+          <div className="section-label justify-center">Kapasitas dan Rekam Jejak</div>
+          <h2 className="text-4xl font-bold mb-0">Data Produksi Kami</h2>
         </motion.div>
 
         {/* ref dipasang di sini agar useInView terpicu saat grid masuk viewport */}

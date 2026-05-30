@@ -26,7 +26,7 @@ export default function FinalCTA() {
             Mulai Proyek Anda
           </div>
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Mari Diskusikan Kebutuhan Pengadaan Anda
+            Mari Diskusikan Kebutuhan Produksi Sepatu Anda
           </h2>
           <p className="text-xl text-white/60 font-light mb-12">
             Kami siap memberikan konsultasi dan penawaran terbaik untuk proyek Anda.

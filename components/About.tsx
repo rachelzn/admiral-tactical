@@ -67,17 +67,17 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.2 }}
           >
-            <div className="section-label">Tentang Kami</div>
-            <h2 className="text-4xl font-bold mb-8">Manufaktur Sepatu Tactical Terpercaya sejak 2014</h2>
+            <div className="section-label">Profil Perusahaan</div>
+            <h2 className="text-4xl font-bold mb-8">Pabrik Sepatu Tactical Lokal Terbesar di Bandung Sejak 2016</h2>
 
             <div className="space-y-6 mb-8">
               <p className="text-lg text-text-secondary font-light leading-relaxed">
-                Admiral Tactical adalah produsen sepatu tactical yang berbasis di Bandung, Indonesia. Kami berfokus
-                pada produksi skala besar untuk kebutuhan institusi, pemerintah, dan perusahaan.
+                Admiral Tactical adalah produsen sepatu tactical yang berbasis di Bandung, Indonesia.
+                Kami berfokus pada produksi sepatu untuk kebutuhan institusi, pemerintah, dan perusahaan swasta.
               </p>
               <p className="text-lg text-text-secondary font-light leading-relaxed">
-                Dengan kapasitas produksi ribuan pasang per bulan dan tim yang berpengalaman, kami siap menangani
-                proyek pengadaan dari skala kecil hingga ratusan ribu pasang.
+                Dengan kapasitas produksi 5.000 – 10.000 pasang per bulan serta lini produksi yang dapat disesuaikan,
+                kami siap untuk menangani proyek kecil, menengah, hingga atas.
               </p>
               <p className="text-lg text-text-secondary font-light leading-relaxed">
                 Setiap produk dirancang dengan mempertimbangkan standar kualitas, fungsi, dan kebutuhan spesifik klien
