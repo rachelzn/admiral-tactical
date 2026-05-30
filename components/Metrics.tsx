@@ -44,7 +44,7 @@ export default function Metrics() {
       num: counts[1],
       suffix: '+',
       label: 'Proyek Selesai',
-      description: 'Skala 500–50.000 pasang',
+      description: 'Skala 5.000–100.000 pasang/bulan',
     },
     {
       num: counts[2],

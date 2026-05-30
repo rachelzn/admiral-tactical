@@ -80,8 +80,8 @@ export default function About() {
                 kami siap untuk menangani proyek kecil, menengah, hingga atas.
               </p>
               <p className="text-lg text-text-secondary font-light leading-relaxed">
-                Setiap produk dirancang dengan mempertimbangkan standar kualitas, fungsi, dan kebutuhan spesifik klien
-                — bukan produk massal dari rak toko.
+                Setiap produk dirancang dengan mempertimbangkan standar kualitas, fungsi, dan kebutuhan spesifik klien,
+                bukan produk massal.
               </p>
             </div>
 
