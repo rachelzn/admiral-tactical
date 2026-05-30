@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-syne: 'Syne', sans-serif;
+    --font-dm-sans: 'DM Sans', sans-serif;
+  }
+
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-dm-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-syne);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  img {
+    @apply block w-full object-cover;
+  }
+
+  button {
+    @apply cursor-pointer border-none outline-none;
+    font-family: var(--font-dm-sans);
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1160px] mx-auto px-10;
+  }
+
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-wider text-olive-600 mb-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-olive-600 text-white px-7 py-3.5 rounded-pill font-medium text-sm transition-all duration-200 hover:bg-olive-800 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white text-foreground px-7 py-3.5 rounded-pill font-medium text-sm border border-border transition-all duration-200 hover:border-text-tertiary hover:bg-surface hover:-translate-y-0.5;
+  }
+
+  .reveal {
+    @apply opacity-0 translate-y-6 ease-out;
+    transition: opacity 650ms, transform 650ms;
+  }
+
+  .reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .reveal-delay-1 {
+    @apply delay-100;
+  }
+
+  .reveal-delay-2 {
+    @apply delay-200;
+  }
+
+  .reveal-delay-3 {
+    @apply delay-300;
+  }
+
+  .reveal-delay-4 {
+    @apply delay-400;
+  }
+}
