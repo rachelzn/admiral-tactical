@@ -71,16 +71,16 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <a href="https://wa.me/6285121330886" target="_blank" rel="noopener noreferrer" className="text-sm text-white/50 hover:text-white/85 transition-colors">
-                  +62 821-0000-0000
+                  +62 851-2133-0886
                 </a>
               </li>
               <li>
-                <a href="mailto:info@admiraltactical.co.id" className="text-sm text-white/50 hover:text-white/85 transition-colors">
-                  info@admiraltactical.co.id
+                <a href="mailto:admiraltacticalwear@gmail.com" className="text-sm text-white/50 hover:text-white/85 transition-colors">
+                  admiraltacticalwear@gmail.com
                 </a>
               </li>
               <li>
-                <p className="text-sm text-white/50">Jl. Industri Raya No. 47, Bandung</p>
+                <p className="text-sm text-white/50">Jl. Gn. Puntang Kp Sirna Galih No.KM 29, Bandung</p>
               </li>
             </ul>
           </div>

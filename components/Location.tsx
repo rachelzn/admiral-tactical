@@ -21,29 +21,29 @@ export default function Location() {
             <div className="section-label">Lokasi</div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Pabrik Kami di Bandung</h2>
             <p className="text-lg text-text-secondary font-light leading-relaxed mb-8">
-              Jl. Industri Raya No. 47,<br />
-              Kawasan Industri Bandung Barat,<br />
-              Bandung, Jawa Barat 40521
+              Jl. Gn. Puntang Kp Sirna Galih No.KM 29,<br />
+              Desa Campaka Mulya, Kec. Cimaung,<br />
+              Kabupaten Bandung, Jawa Barat 40374
             </p>
 
             <div className="space-y-4 mb-10">
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-olive-600 flex-shrink-0" />
-                <span className="text-base text-text-secondary">+62 821-0000-0000</span>
+                <span className="text-base text-text-secondary">+62 851-2133-0886</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-olive-600 flex-shrink-0" />
-                <span className="text-base text-text-secondary">info@admiraltactical.co.id</span>
+                <span className="text-base text-text-secondary">admiraltactical@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-olive-600 flex-shrink-0" />
-                <span className="text-base text-text-secondary">Senin – Jumat, 08.00 – 17.00 WIB</span>
+                <span className="text-base text-text-secondary">Senin – Sabtu, 08.00 – 17.00 WIB</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://maps.google.com/?q=Bandung+Industri"
+                href="https://share.google/GFW264UNLakG0FjIL"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
