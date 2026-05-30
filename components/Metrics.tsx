@@ -11,7 +11,7 @@ export default function Metrics() {
   useEffect(() => {
     if (!isInView) return;
 
-    const targets = [10, 150, 50000, 100];
+    const targets = [10, 150, 20000, 100];
     const intervals: (NodeJS.Timeout | null)[] = targets.map((target, i) => {
       if (i === 3) return null;
       const duration = 1800;
