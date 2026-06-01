@@ -8,16 +8,32 @@ const REEL_EMBED_URL = 'https://www.instagram.com/reel/DQT-2gsj4Wj/embed/';
 
 const photos = [
   {
-    src: 'https://images.pexels.com/photos/3962282/pexels-photo-3962282.jpeg?w=1200&q=80&auto=format&fit=crop',
-    label: 'Lantai Produksi',
+    src: '/factory/pola.png',
+    label: 'Pembuatan Pola',
   },
   {
-    src: 'https://images.pexels.com/photos/3962283/pexels-photo-3962283.jpeg?w=800&q=80&auto=format&fit=crop',
-    label: 'Proses Jahit',
+    src: '/factory/cutting.png',
+    label: 'Cutting',
   },
   {
-    src: 'https://images.pexels.com/photos/3962284/pexels-photo-3962284.jpeg?w=800&q=80&auto=format&fit=crop',
+    src: '/factory/assembling.png',
+    label: 'Assembling',
+  },
+  {
+    src: '/factory/pemasangan-sol.png',
+    label: 'Pemasangan Sol',
+  },
+  {
+    src: '/factory/quality-control.png',
     label: 'Quality Control',
+  },
+  {
+    src: 'https://images.pexels.com/photos/3811082/pexels-photo-3811082.jpeg?w=800&q=80&auto=format&fit=crop',
+    label: 'Finishing',
+  },
+  {
+    src: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?w=800&q=80&auto=format&fit=crop',
+    label: 'Inspeksi Akhir',
   },
 ];
 
@@ -99,39 +115,26 @@ export default function Factory() {
           </motion.a>
         </div>
 
-        {/* ── Desktop: editorial asymmetric ────────────────────────────────
-            ┌──────────────────────────────┬─────────────┐
-            │  Photo 1  (besar, flex-1)    │             │
-            ├────────────────┬─────────────┤   Reels     │
-            │   Photo 2      │   Photo 3   │  (portrait) │
-            └────────────────┴─────────────┴─────────────┘
-        ──────────────────────────────────────────────────────────────── */}
-        <div className="hidden md:flex gap-3" style={{ height: '560px' }}>
+        {/* ── Desktop Layout ────────────────────────────────────────────────
+            Left: 3-col photo grid (7 photos in 3 rows)
+            Right: Instagram Reel (portrait, fixed width)
+            ─────────────────────────────────────────────────────────────── */}
+        <div className="hidden md:flex gap-3" style={{ height: '600px' }}>
 
-          {/* Left: 2-row photo stack */}
-          <div className="flex-1 flex flex-col gap-3 min-w-0">
-            {/* Photo 1 — big */}
-            <PhotoCard
-              src={photos[0].src}
-              label={photos[0].label}
-              className="flex-1"
-              delay={0}
-            />
-            {/* Photos 2 & 3 — row */}
-            <div className="flex gap-3" style={{ height: '180px' }}>
-              <PhotoCard
-                src={photos[1].src}
-                label={photos[1].label}
-                className="flex-1"
-                delay={0.12}
-              />
-              <PhotoCard
-                src={photos[2].src}
-                label={photos[2].label}
-                className="flex-1"
-                delay={0.2}
-              />
-            </div>
+          {/* Left: Photo grid — 3 cols × flexible rows */}
+          <div className="flex-1 min-w-0 grid gap-3" style={{ gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '1fr 1fr 1fr' }}>
+            {/* Row 1: photos 0, 1, 2 */}
+            <PhotoCard src={photos[0].src} label={photos[0].label} className="col-span-2" delay={0} />
+            <PhotoCard src={photos[1].src} label={photos[1].label} delay={0.08} />
+
+            {/* Row 2: photos 2, 3, 4 */}
+            <PhotoCard src={photos[2].src} label={photos[2].label} delay={0.14} />
+            <PhotoCard src={photos[3].src} label={photos[3].label} delay={0.2} />
+            <PhotoCard src={photos[4].src} label={photos[4].label} delay={0.26} />
+
+            {/* Row 3: photos 5, 6 */}
+            <PhotoCard src={photos[5].src} label={photos[5].label} delay={0.32} />
+            <PhotoCard src={photos[6].src} label={photos[6].label} className="col-span-2" delay={0.38} />
           </div>
 
           {/* Right: Reels portrait — fixed width, full height */}
@@ -147,7 +150,6 @@ export default function Factory() {
               className="absolute inset-0 w-full h-full"
               style={{ border: 0 }}
               scrolling="no"
-              allowTransparency
               allowFullScreen
               title="Instagram Reels Admiral Tactical"
             />
@@ -156,8 +158,21 @@ export default function Factory() {
 
         {/* ── Mobile: stacked ──────────────────────────────────────────── */}
         <div className="flex flex-col gap-3 md:hidden">
-          {/* Photo 1 */}
+          {/* Top feature photo */}
           <PhotoCard src={photos[0].src} label={photos[0].label} className="aspect-video" delay={0} />
+
+          {/* 2-col grid: photos 1–4 */}
+          <div className="grid grid-cols-2 gap-3">
+            {photos.slice(1, 5).map((photo, i) => (
+              <PhotoCard
+                key={photo.label}
+                src={photo.src}
+                label={photo.label}
+                className="aspect-[4/3]"
+                delay={0.05 * i}
+              />
+            ))}
+          </div>
 
           {/* Reels — portrait */}
           <motion.div
@@ -172,15 +187,14 @@ export default function Factory() {
               className="absolute inset-0 w-full h-full"
               style={{ border: 0 }}
               scrolling="no"
-              allowTransparency
               allowFullScreen
               title="Instagram Reels Admiral Tactical"
             />
           </motion.div>
 
-          {/* Photos 2 & 3 */}
+          {/* Last 2 photos */}
           <div className="grid grid-cols-2 gap-3">
-            {photos.slice(1).map((photo, i) => (
+            {photos.slice(5).map((photo, i) => (
               <PhotoCard
                 key={photo.label}
                 src={photo.src}
