@@ -8,7 +8,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-screen flex flex-col justify-end overflow-hidden pt-24 pb-20">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?w=1800&q=90&auto=format&fit=crop"
+          src="/hero/hero-bg.png"
           alt="Tactical footwear manufacturing"
           className="w-full h-full object-cover brightness-[0.45]"
         />
@@ -34,7 +34,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-syne text-5xl md:text-7xl font-bold text-white max-w-3xl mb-6 leading-tight"
         >
-          Produksi Sepatu Tactical dengan <span className="text-accent">Kapasitas Produksi Besar dan Pengiriman Nasional</span>
+          Produksi Sepatu Tactical dengan <span className="text-accent">Kapasitas Besar dan Pengiriman Nasional</span>
         </motion.h1>
 
         <motion.p
