@@ -43,10 +43,15 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white/30 mb-4">Perusahaan</h4>
             <ul className="space-y-2.5">
-              {['Tentang Kami', 'Fasilitas Pabrik', 'Keunggulan', 'Lokasi'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(/\s+/g, '')}`} className="text-sm text-white/50 hover:text-white/85 transition-colors">
-                    {item}
+              {([
+                { label: 'Tentang Kami', href: '#about' },
+                { label: 'Fasilitas Pabrik', href: '#factory' },
+                { label: 'Keunggulan', href: '#why' },
+                { label: 'Lokasi', href: '#location' },
+              ] as { label: string; href: string }[]).map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="text-sm text-white/50 hover:text-white/85 transition-colors">
+                    {item.label}
                   </a>
                 </li>
               ))}
@@ -56,10 +61,14 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white/30 mb-4">Layanan</h4>
             <ul className="space-y-2.5">
-              {['Portofolio Produk', 'Custom Design', 'Pengadaan', 'Testimoni'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-sm text-white/50 hover:text-white/85 transition-colors">
-                    {item}
+              {([
+                { label: 'Portofolio Produk', href: '#products' },
+                { label: 'Custom Design', href: '#custom' },
+                { label: 'Proses Pemesanan', href: '#hero' },
+              ] as { label: string; href: string }[]).map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="text-sm text-white/50 hover:text-white/85 transition-colors">
+                    {item.label}
                   </a>
                 </li>
               ))}
